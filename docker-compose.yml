@@ -2,7 +2,7 @@ services:
   productmanagement.api:
     build:
       context: .
-      dockerfile: ./ProductManagement.API/Dockerfile
+      dockerfile: ./src/ProductManagement.Api/Dockerfile
     container_name: productmanagement.api
     restart: always
     ports:
@@ -14,7 +14,7 @@ services:
       - ConnectionStrings__MongoDb=mongodb://admin:admin123@mongodb:27017/ProductManagementDB
 
   mongodb:
-    image: mongo:latest
+    image: mongo:7.0.2
     container_name: mongodb
     restart: always
     ports:
