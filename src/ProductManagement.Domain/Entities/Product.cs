@@ -16,7 +16,7 @@ public class Product : AggregateRoot
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
 
-    private Product() { }
+    //private Product() { }
 
     private Product(ProductId id, string name, string description, Price price, Sku sku, int stockQuantity)
     {
