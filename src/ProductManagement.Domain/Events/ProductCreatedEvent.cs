@@ -2,14 +2,9 @@
 
 namespace ProductManagement.Domain.Events;
 
-public class ProductCreatedEvent : IDomainEvent
+public class ProductCreatedEvent(Product product) : IDomainEvent
 {
-    public Product Product { get; }
-    public DateTime OccurredOn { get; }
-
-    public ProductCreatedEvent(Product product)
-    {
-        Product = product;
-        OccurredOn = DateTime.UtcNow;
-    }
+    public Product Product { get; } = product;
+    public DateTime OccurredOn { get; } = DateTime.UtcNow;
 }
+
